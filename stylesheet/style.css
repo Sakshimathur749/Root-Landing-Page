@@ -1,0 +1,127 @@
+.inter {
+    font-family: "Inter", sans-serif;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.text-orange {
+    color: #E46B3F !important;
+}
+
+.formBody,
+.formHead {
+    padding: 40px;
+}
+
+.pb-15px {
+    padding-bottom: 15px;
+}
+
+.containerPy {
+    padding: 80px 0px;
+}
+
+.apply-btn {
+    padding: 15px 30px;
+    border-radius: 14px;
+    background: #E46B3F;
+}
+
+.logo-container {
+    padding: 2px 0px;
+}
+
+.logo-container img {
+    max-width: 15%;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 213/106;
+}
+
+.mainBgImage {
+    padding: 94px 0px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(102, 102, 102, 0.60) 100%), url('../assets/HeroSection.webp') lightgray 2px / 100% 100% no-repeat;
+}
+
+.admissionBadge {
+    padding: 10px 50px 10px 25px;
+    gap: 12px;
+    border-radius: 37770672px;
+    border: 1.126px solid rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.admissionBadge div {
+    width: 12px;
+    height: 12px;
+    border-radius: 37770672px;
+    opacity: 0.5;
+    background: #FFF;
+}
+
+.admissionBadge span {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.141px;
+    letter-spacing: 0.492px;
+}
+
+.mainHead {
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    padding-right: 20%;
+}
+
+.mainPara {
+    color: #D1D5DC;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.form {
+    width: 500px;
+    border-radius: 10px 10px 0 0;
+    background: #FFF;
+}
+
+.formHead,
+.form-field {
+    border-bottom: 1px solid #4D4D4D;
+}
+
+.formHead h3 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    padding-right: 40px;
+}
+
+.formBody {
+    gap: 20px;
+}
+
+.form-svg {
+    top: 52px;
+    right: 60px
+}
+
+.our-program {
+    color: #E46B3F;
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,47 @@
+@media (max-width:994px) {
+    .logo-container img {
+        max-width: 40%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .formBody,
+    .formHead {
+        padding: 30px;
+    }
+
+    .form-svg {
+        top: 30px;
+        right: 0px;
+    }
+
+    .mainBgImage {
+        padding: 50px 14px;
+    }
+
+    .admissionBadge {
+        padding: 10px 20px;
+    }
+
+    .mainHead {
+        font-size: 40px;
+        padding-right: 0%;
+    }
+
+    .mainPara {
+        font-size: 18px;
+    }
+
+    .admissionBadge span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:768px) {
+    .form-svg {
+        top: 100px;
+        right: 0px;
+    }
+}
