@@ -10,6 +10,14 @@
     color: #E46B3F !important;
 }
 
+.text-darkBlue {
+    color: #1F144F !important
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
 .formBody,
 .formHead {
     padding: 40px;
@@ -118,10 +126,119 @@
 }
 
 .our-program {
-    color: #E46B3F;
-    font-family: Inter;
     font-size: 13px;
     font-weight: 700;
     line-height: 19px;
     letter-spacing: 3px;
+}
+
+.programSubHead {
+    color: #1F144F;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.programPara {
+    color: rgba(31, 20, 79, 0.50);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.32px;
+    width: 500px;
+}
+
+.whyTheseStreamImg img {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+}
+
+.imageOverlay {
+    width: 500px;
+    bottom: 0;
+    padding: 30px;
+    color: white;
+}
+
+.imageOverlay h6 {
+    color: #A8E63E;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+.imageOverlay h5 {
+    color: #ffffffe6;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.imageOverlay p {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.cardContainer {
+    width: 100%;
+    padding: 30px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #F7F7FA;
+}
+
+.subjectHead {
+    color: rgba(31, 20, 79, 0.80);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 22.453px;
+}
+
+.icon {
+    border-radius: 10px;
+    background: #1F144F;
+    height: 40px;
+    padding: 10px 14px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 21.589px;
+    letter-spacing: 0.72px;
+}
+
+.cardContainer div p {
+    color: rgba(31, 20, 79, 0.70);
+    font-size: 16.31px;
+    font-weight: 400;
+    line-height: 27.73px;
+}
+
+.subjectCard {
+    border-top: 1px solid rgba(142, 142, 142, 0.20);
+    padding: 20px 12px 0 2px;
+    gap: 17.263px;
+    align-self: stretch;
+}
+
+.subTitle {
+    color: rgba(31, 20, 79, 0.50);
+    font-size: 11.898px;
+    font-weight: 700;
+    line-height: 17.847px;
+    letter-spacing: 1.785px;
+    text-transform: uppercase;
+}
+
+.subBadge {
+    padding: 10px 14px;
+    gap: 8px;
+    border-radius: 32196102px;
+    border: 1px solid rgba(31, 20, 79, 0.06);
+    color: rgba(31, 20, 79, 0.60);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22.453px;
 }

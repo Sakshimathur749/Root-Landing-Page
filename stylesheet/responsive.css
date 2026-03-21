@@ -3,8 +3,12 @@
         max-width: 40%;
     }
 
-    .form {
-        width: 100%;
+    .form,
+    .programPara,
+    .whyTheseStreamImg img,
+    .imageOverlay {
+        max-width: 100% !important;
+        width: 100% !important;
     }
 
     .formBody,
@@ -12,12 +16,17 @@
         padding: 30px;
     }
 
+    .cardContainer {
+        padding: 20px;
+    }
+
     .form-svg {
         top: 30px;
         right: 0px;
     }
 
-    .mainBgImage {
+    .mainBgImage,
+    .containerPy {
         padding: 50px 14px;
     }
 
@@ -25,17 +34,35 @@
         padding: 10px 20px;
     }
 
+    .imageOverlay {
+        padding: 18px;
+    }
+
     .mainHead {
         font-size: 40px;
         padding-right: 0%;
     }
 
-    .mainPara {
+    .programSubHead {
+        font-size: 28px;
+    }
+
+    .mainPara,
+    .subjectHead {
         font-size: 18px;
     }
 
-    .admissionBadge span {
+    .admissionBadge span,
+    .cardContainer div p {
         font-size: 14px;
+    }
+
+    .subBadge {
+        font-size: 11px;
+    }
+
+    .apply-btn {
+        padding: 10px 30px;
     }
 }
 
@@ -43,5 +70,15 @@
     .form-svg {
         top: 100px;
         right: 0px;
+    }
+
+    .gap-md-30 {
+        gap: 30px;
+    }
+}
+
+@media (min-width:768px) {
+    .gap-60 {
+        gap: 60px;
     }
 }
