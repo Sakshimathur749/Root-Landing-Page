@@ -1,3 +1,19 @@
+@media (min-width:768px) {
+    .gap-60 {
+        gap: 60px;
+    }
+
+    .mb-40 {
+        margin-bottom: 40px !important;
+    }
+}
+
+@media (min-width:946) {
+    .mt-md--60px {
+        margin-top: -60px;
+    }
+}
+
 @media (max-width:994px) {
     .mb-60px {
         margin-bottom: 60px;
@@ -10,7 +26,10 @@
     .form,
     .programPara,
     .whyTheseStreamImg img,
-    .imageOverlay {
+    .imageOverlay,
+    .footerLeft p,
+    .contactInfo,
+    .footerRight {
         max-width: 100% !important;
         width: 100% !important;
     }
@@ -49,6 +68,7 @@
 
     .programSubHead {
         font-size: 28px;
+        line-height: 44px;
     }
 
     .mainPara,
@@ -56,8 +76,14 @@
         font-size: 18px;
     }
 
+    .admissionOpenPara {
+        font-size: 16px;
+    }
+
     .admissionBadge span,
-    .cardContainer div p {
+    .cardContainer div p,
+    .faq-number,
+    .accordion-body {
         font-size: 14px;
     }
 
@@ -69,20 +95,28 @@
         padding: 10px 30px;
     }
 
-    .pathwayHead {
+    .pathwayHead,
+    .admissionOpenHead {
         font-size: 30px;
+        line-height: 42px;
     }
 
     .pathwayCardContent {
         padding: 50px 20px;
     }
 
-    .footerRight {
+    .footerRight,
+    .feature-card {
         padding-top: 20px;
     }
 
     .mainfooter {
         gap: 35px
+    }
+
+    .faqContainer,
+    .gap-md-30 {
+        gap: 30px !important
     }
 }
 
@@ -94,17 +128,5 @@
 
     .gap-md-30 {
         gap: 30px;
-    }
-}
-
-@media (min-width:768px) {
-    .gap-60 {
-        gap: 60px;
-    }
-}
-
-@media (min-width:946) {
-    .mt-md--60px {
-        margin-top: -60px;
     }
 }
