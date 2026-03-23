@@ -1,4 +1,8 @@
 @media (max-width:994px) {
+    .mb-60px {
+        margin-bottom: 60px;
+    }
+
     .logo-container img {
         max-width: 40%;
     }
@@ -64,6 +68,22 @@
     .apply-btn {
         padding: 10px 30px;
     }
+
+    .pathwayHead {
+        font-size: 30px;
+    }
+
+    .pathwayCardContent {
+        padding: 50px 20px;
+    }
+
+    .footerRight {
+        padding-top: 20px;
+    }
+
+    .mainfooter {
+        gap: 35px
+    }
 }
 
 @media (max-width:768px) {
@@ -80,5 +100,11 @@
 @media (min-width:768px) {
     .gap-60 {
         gap: 60px;
+    }
+}
+
+@media (min-width:946) {
+    .mt-md--60px {
+        margin-top: -60px;
     }
 }
