@@ -1,26 +1,33 @@
 @media (min-width:768px) {
-    .gap-60 {
-        gap: 60px;
-    }
-
     .mb-40 {
         margin-bottom: 40px !important;
     }
 }
 
-@media (min-width:946) {
+@media (min-width:946px) {
+    .mt-md--60px {
+        margin-top: -25px;
+    }
+
+}
+
+@media (min-width:1100px) {
     .mt-md--60px {
         margin-top: -60px;
     }
 }
 
-@media (max-width:994px) {
+@media (max-width:1064px) {
     .mb-60px {
         margin-bottom: 60px;
     }
 
     .logo-container img {
-        max-width: 40%;
+        max-width: 30%;
+    }
+
+    .journeyCard {
+        width: fit-content
     }
 
     .form,
@@ -44,7 +51,6 @@
     }
 
     .form-svg {
-        top: 30px;
         right: 0px;
     }
 
@@ -68,7 +74,7 @@
 
     .programSubHead {
         font-size: 28px;
-        line-height: 44px;
+        line-height: 40px;
     }
 
     .mainPara,
@@ -96,7 +102,9 @@
     }
 
     .pathwayHead,
-    .admissionOpenHead {
+    .admissionOpenHead,
+    .career-header h3,
+    .journey-head h4 {
         font-size: 30px;
         line-height: 42px;
     }
@@ -120,13 +128,112 @@
     }
 }
 
-@media (max-width:768px) {
-    .form-svg {
-        top: 100px;
-        right: 0px;
+@media(max-width:946px) {
+    .whyTheseStreamImg {
+        max-height: 500px;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        margin: auto;
+    }
+}
+
+@media (max-width:546px) {
+    .journeyCard {
+        width: 100%;
     }
 
-    .gap-md-30 {
+    .logo-container img {
+        max-width: 40%;
+    }
+
+    .formBody,
+    .formHead {
+        padding: 20px;
+    }
+
+    .formHead h3,
+    .pathwayCardContent h5 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .mainHead {
+        font-size: 35px;
+    }
+
+    .mainPara,
+    .subjectHead,
+    .programPara,
+    .feature-content p {
+        font-size: 16px;
+        line-height: 22px !important;
+    }
+
+    .pathwayCardContent p,
+    .imageOverlay p {
+        font-size: 14px;
+        line-height: 20px
+    }
+
+    .pathwayIcon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pathwayIcon span {
+        width: 50px;
+        height: 50px;
+        padding: 0 14px;
+    }
+
+    .pathwayCardContent {
+        padding: 35px 20px;
+    }
+
+    .pathwayFooter {
+        gap: 20px
+    }
+
+    .feature-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .imageOverlay {
+        padding: 16px;
+    }
+
+    .opportunity-header {
+        padding: 20px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .opportunity-content {
+        padding: 10px 20px;
+    }
+
+    .faq-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .process-row-container {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
         gap: 30px;
+    }
+
+    .iconCircle {
+        width: 50px;
+        height: 50px;
+        padding: 0 14px;
+        top: -25px;
+    }
+
+    .strengthCard {
+        width: 165px;
     }
 }
