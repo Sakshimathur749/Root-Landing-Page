@@ -14,6 +14,11 @@ input {
     width: fit-content;
 }
 
+.w-300 {
+    max-width: 300px !important;
+    width: 100%;
+}
+
 .text-opacity-80 {
     --bs-text-opacity: 0.8;
 }
@@ -32,6 +37,10 @@ input {
 
 .text-color-3 {
     color: #C5C5C5 !important;
+}
+
+.text-color-4 {
+    color: #6A7282 !important;
 }
 
 .text-gray-2 {
@@ -252,7 +261,8 @@ input {
 }
 
 .imageOverlay h5,
-.pathwayCardContent h5 {
+.pathwayCardContent h5,
+.process-card h4 {
     color: #ffffffe6;
     font-size: 22px;
     font-weight: 700;
@@ -487,7 +497,8 @@ input {
 
 .footerLeft p,
 .contactInfo,
-.journeyCard p {
+.journeyCard p,
+.process-card p {
     color: #99A1AF;
     font-size: 14px;
     line-height: 20px;
@@ -511,7 +522,8 @@ input {
 
 .copyRightSection p,
 .newAdmission,
-.journey-head span {
+.journey-head span,
+.process-card span {
     color: #6A7282;
     font-size: 14px;
     font-weight: 400;
@@ -829,4 +841,8 @@ input {
     height: 2px;
     background: linear-gradient(90deg, #E46B3F 0%, rgba(228, 107, 63, 0.50) 50%, #E46B3F 100%);
     z-index: 0;
+}
+
+.step-tag {
+    color: #C41230 !important;
 }
