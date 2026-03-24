@@ -135,6 +135,17 @@
         aspect-ratio: 1 / 1;
         margin: auto;
     }
+
+    .process-row-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .career-img {
+        margin: auto;
+        max-height: 500px;
+    }
 }
 
 @media (max-width:546px) {
@@ -221,8 +232,6 @@
 
     .process-row-container {
         padding-top: 20px;
-        display: flex;
-        flex-direction: column;
         gap: 30px;
     }
 
