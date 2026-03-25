@@ -56,6 +56,10 @@ input {
     height: 100%;
 }
 
+.landing-integate {
+    padding-bottom: 40px;
+}
+
 .bg-orange,
 .accordion-button:hover .faq-icon {
     background-color: #E46B3F !important;
