@@ -505,6 +505,7 @@ input {
 
 .footerLeft p,
 .contactInfo,
+.contactInfo>a>span,
 .journeyCard p,
 .process-card p {
     color: #99A1AF;

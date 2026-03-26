@@ -1,0 +1,96 @@
+@media (max-width:920px) {
+    .hero-container {
+        padding: 50px 0px;
+    }
+
+    .container-py {
+        padding: 40px 0px;
+    }
+
+    .offerContent,
+    .text-coral {
+        padding: 0px 15px;
+    }
+
+    .apply-btn,
+    .enrollbtn {
+        padding: 10px 25px;
+    }
+
+    .admissionBadge {
+        padding: 10px 40px;
+    }
+
+    .footerRight {
+        padding-top: 20px;
+    }
+
+    .formBody,
+    .formHead {
+        padding: 30px;
+    }
+
+    .mainHead,
+    .offerHead h3 {
+        font-size: 38px;
+        line-height: 52px;
+    }
+
+    .formHead h3,
+    .offerCard>div:nth-child(2) h4,
+    .offerCard>div:nth-child(3) h4 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .enrollbtn {
+        font-size: 16px;
+    }
+
+    .text-coral,
+    .offerInnerContent p {
+        font-size: 14px;
+    }
+
+    .logo,
+    .footerLeft img {
+        max-width: 200px;
+    }
+
+    .form,
+    .footerLeft p,
+    .contactInfo,
+    .footerRight {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .form-svg {
+        right: 0px;
+    }
+
+    .heroContent {
+        gap: 10px;
+    }
+
+    .offerContent {
+        gap: 15px
+    }
+
+    .offerMain,
+    .offerCard {
+        gap: 20px;
+    }
+
+    .mainfooter {
+        gap: 35px
+    }
+
+    .mainPara {
+        max-width: 100%;
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 0px 5px;
+    }
+}
