@@ -17,7 +17,8 @@ input {
 }
 
 .heroContent,
-.gap-20 {
+.gap-20,
+.formBody {
     gap: 20px
 }
 
@@ -124,7 +125,7 @@ input {
 .heroBgImage {
     background:
         radial-gradient(70.71% 70.71% at 50% 50%, rgba(255, 255, 255, 0) 100%),
-        url('../assets/Degree/Section.png');
+        url('../images/Section.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -214,10 +215,6 @@ input {
     font-weight: 600;
     line-height: 35px;
     padding-right: 40px;
-}
-
-.formBody {
-    gap: 20px;
 }
 
 .form-svg {
@@ -327,6 +324,13 @@ input {
 }
 
 /* We Offer */
+
+/* Our Difference */
+.ourDifferenceMain {
+    gap: 44px;
+}
+
+/* Our Difference */
 
 /* Footer */
 .footerLeft img {

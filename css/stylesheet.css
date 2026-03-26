@@ -145,7 +145,7 @@ input {
 
 .mainBgImage {
     padding: 94px 0px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(102, 102, 102, 0.60) 100%), url('../assets/HeroSection.webp') lightgray 2px / 100% 100% no-repeat;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(102, 102, 102, 0.60) 100%), url('../images/HeroSection.webp') lightgray 2px / 100% 100% no-repeat;
 }
 
 .admissionBadge,
@@ -604,7 +604,7 @@ input {
 .bgImage {
     background:
         linear-gradient(rgba(10, 10, 26, 0.85), rgba(10, 10, 26, 0.85)),
-        url("../assets/ImageWithFallback.png") top/cover no-repeat;
+        url("../images/ImageWithFallback.png") top/cover no-repeat;
     width: 100%;
     min-height: 400px;
     max-height: 800px;
