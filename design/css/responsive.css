@@ -1,4 +1,8 @@
 @media (max-width:920px) {
+    .mx-md-0 {
+        margin: auto 0px !important;
+    }
+
     .hero-container {
         padding: 50px 0px;
     }
@@ -34,6 +38,12 @@
     .offerHead h3 {
         font-size: 38px;
         line-height: 52px;
+    }
+
+    .headline,
+    .opportunityHead,
+    .programSubHead {
+        font-size: 34px;
     }
 
     .formHead h3,
@@ -73,7 +83,8 @@
         gap: 10px;
     }
 
-    .offerContent {
+    .offerContent,
+    .ourDifferenceMain {
         gap: 15px
     }
 
@@ -82,8 +93,13 @@
         gap: 20px;
     }
 
-    .mainfooter {
+    .mainfooter,
+    .opportunityGap {
         gap: 35px
+    }
+
+    .gap-md-30 {
+        gap: 30px;
     }
 
     .mainPara {
@@ -92,5 +108,12 @@
         font-size: 18px;
         line-height: 28px;
         padding: 0px 5px;
+    }
+}
+
+@media (min-width:1064px) {
+    .maxW-md-850px {
+        width: 850px !important;
+        z-index: 1;
     }
 }

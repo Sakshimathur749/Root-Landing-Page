@@ -38,6 +38,7 @@ input {
     color: #216CB4 !important;
 }
 
+
 .bg-navy {
     background-color: #216CB4 !important;
 }
@@ -62,6 +63,11 @@ input {
     color: #444 !important;
 }
 
+.text-color-6 {
+    color: #EEE !important;
+}
+
+
 .text-gray-2 {
     color: #99A1AF !important;
 }
@@ -80,6 +86,10 @@ input {
 
 .bg-lightgrey {
     background-color: #F4F4F4 !important;
+}
+
+.bg-F8F7F7 {
+    background-color: #F8F7F7 !important;
 }
 
 .text-darkBlue {
@@ -108,6 +118,26 @@ input {
 
 .fw-700 {
     font-weight: 700 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.ls-1 {
+    letter-spacing: 1px !important;
+}
+
+.ls-2 {
+    letter-spacing: 2px !important;
+}
+
+.ls-3 {
+    letter-spacing: 3px !important;
+}
+
+.w-30 {
+    width: 30px !important;
 }
 
 .container-py {
@@ -255,7 +285,9 @@ input {
     gap: 32px
 }
 
-.offerHead>span {
+.offerHead>span,
+.ourDifferenceHead>div>span,
+.reasons-label {
     color: #E42A1D;
     font-family: "Segoe UI";
     font-size: 12px;
@@ -271,7 +303,10 @@ input {
     font-weight: 900;
 }
 
-.borderBottom>span {
+.borderBottom>span,
+.ourDifferenceHead>div>div,
+.card-divider,
+.careerDivider {
     display: inline-block;
     width: 40px;
     height: 3px;
@@ -316,7 +351,8 @@ input {
 }
 
 .offerCard>div:nth-child(2) h4,
-.offerCard>div:nth-child(3) h4 {
+.offerCard>div:nth-child(3) h4,
+.card-title {
     color: #FFF;
     font-size: 22px;
     font-weight: 900;
@@ -330,7 +366,180 @@ input {
     gap: 44px;
 }
 
+.ourDifferenceHead {
+    gap: 18px;
+}
+
+.headline {
+    color: #FFF;
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 45px;
+}
+
+.rightPlace {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.feature-card {
+    gap: 16px;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.student-image-col {
+    width: 422px;
+    aspect-ratio: 43/80;
+}
+
 /* Our Difference */
+
+/* Opprtunity */
+.opportunityHead {
+    font-family: "Playfair Display";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -1.344px;
+}
+
+.opportunityGap,
+.gap-50 {
+    gap: 60px;
+}
+
+.opportunityImg {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    max-height: 323px;
+    aspect-ratio: 1173/296;
+}
+
+/* Opprtunity */
+
+/* Our key */
+.programSubHead {
+    font-family: "Playfair Display";
+    color: #1F144F;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.cardGrid {
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 20px;
+}
+
+.strengthCard {
+    width: 220px;
+    gap: 20px;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(31, 20, 79, 0.50);
+    background: #FFF;
+    box-shadow: 2px 4px 4px 0 rgba(132, 113, 216, 0.60);
+}
+
+.strengthCard div:nth-child(1) {
+    width: 70px;
+    height: 70px;
+    aspect-ratio: 1/1;
+}
+
+.strengthCard h5 {
+    color: #000;
+    font-size: 14.72px;
+    font-weight: 700;
+    line-height: 21.344px;
+}
+
+.strengthCard span {
+    border-radius: 26843500px;
+    background: rgba(31, 20, 79, 0.70);
+    width: 24px;
+    height: 2px;
+}
+
+/* Our key */
+
+/* Career Pathways */
+.careerPathway {
+    color: #200020;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 60px;
+    font-weight: 800;
+    max-width: 800px;
+    width: 100%;
+}
+
+.careerPathwaysHead p {
+    color: #6A7282;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29.25px;
+    max-width: 580px;
+    width: 100%;
+}
+
+.tab-toggle {
+    border-radius: 26843500px;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+    max-width: 510px;
+    width: 100%;
+    padding: 20px;
+}
+
+.tab-toggle {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 26843500px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+    max-width: 510px;
+    width: 100%;
+    padding: 20px;
+    gap: 4px;
+}
+
+.tab-btn {
+    border: none;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6A7282;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.tab-btn.active {
+    background-color: #E42A1D;
+    color: #ffffff;
+}
+
+.career-card {
+    border-radius: 13.381px;
+    background: #FFF;
+    box-shadow: 0 8.363px 12.545px -2.509px rgba(0, 0, 0, 0.10), 0 3.345px 5.018px -3.345px rgba(0, 0, 0, 0.10);
+}
+
+/* Career Pathways */
 
 /* Footer */
 .footerLeft img {
@@ -340,7 +549,8 @@ input {
 }
 
 .pathwayFooter p,
-.offerInnerContent p {
+.offerInnerContent p,
+.card-text {
     color: rgba(31, 20, 79, 0.60);
     font-size: 16px;
     font-weight: 400;
@@ -370,7 +580,8 @@ input {
 }
 
 .footerLeft p,
-.contactInfo {
+.contactInfo,
+.contactInfo>a>span {
     color: #99A1AF;
     font-size: 14px;
     line-height: 20px;
@@ -385,14 +596,16 @@ input {
     padding-top: 30px;
 }
 
-.footerRight h5 {
+.footerRight h5,
+.sub-description {
     color: #FFF;
     font-size: 18px;
     font-weight: 500;
     line-height: 20px;
 }
 
-.copyRightSection p {
+.copyRightSection p,
+.careerSubHead {
     color: #6A7282;
     font-size: 14px;
     font-weight: 400;

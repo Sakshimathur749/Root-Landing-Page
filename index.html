@@ -50,7 +50,8 @@
                                 </svg></button></a>
                     </div>
                     <div class="col-12 col-lg-5 d-lg-inline-flex justify-content-lg-end">
-                        <form class="form" id="admission-form">
+                        <form class="form" method="POST" action="send-data.php" name="landing_form"
+                            onSubmit="return valid_landing_form();" id="admission-form">
                             <div class="position-relative formHead">
                                 <h3 class=" text-black mb-0">Your Dream Career Is Just <span class="text-orange">One
                                         Step
@@ -79,22 +80,42 @@
                                 </svg>
                             </div>
                             <div class="formBody d-flex flex-column">
-                                <div class="form-field pb-15px">
-                                    <input type="text" placeholder="Full Name*" class="border-0 w-fit">
+                                <div class="">
+                                    <div class="form-field pb-15px">
+                                        <input type="text" name="name" id="name" placeholder="Name*" type="text"
+                                            class="border-0 w-100" required>
+                                    </div>
+                                    <small class="error text-danger">Name is required</small>
                                 </div>
-                                <div class="form-field pb-15px">
-                                    <input type="email" placeholder="Email*" class="border-0 w-fit">
+                                <div>
+                                    <div class="form-field pb-15px">
+                                        <input type="email" name="email" id="email"
+                                            pattern="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$"
+                                            placeholder="Email*" type="email" class="border-0 w-100 " required>
+                                    </div>
+                                    <small class="error text-danger">Email is required</small>
                                 </div>
-                                <div class="form-field pb-15px">
-                                    <input type="tel" placeholder="Phone Number*" class="border-0 w-fit">
+                                <div>
+                                    <div class="form-field pb-15px">
+                                        <input type="tel" id="phone_no" maxlength="10" minlength="10" name="phone"
+                                            pattern="[1-9]{1}[0-9]{9}" placeholder="Mobile Number*"
+                                            title="Please enter a valid 10 digit mobile number." class="border-0 w-100 "
+                                            required>
+                                    </div>
+                                    <small class="error text-danger">Phone no. is required</small>
                                 </div>
-                                <div class="form-field pb-15px">
-                                    <input type="text" placeholder="Select Your State*" class="border-0 w-fit">
+                                <div>
+                                    <div class="form-field pb-15px">
+                                        <select class="form-control border-0 outline-0 box-shadow-none w-100"
+                                            name="course" id="course" required>
+                                            <option value="-1">Course Interested *</option>
+                                            <option value="MEC">MEC</option>
+                                            <option value="CEC">CEC</option>
+                                        </select>
+                                    </div>
+                                    <small class="error text-danger">Course is required</small>
                                 </div>
-                                <div class="form-field pb-15px">
-                                    <input type="text" placeholder="Enter Your City*" class="border-0 w-fit">
-                                </div>
-                                <button name="submit" class="apply-btn text-white border-0 rounded-0">Save
+                                <button type="submit" name="submit" class="apply-btn text-white border-0 rounded-0">Save
                                     Your Spot</button>
                             </div>
                         </form>
@@ -1430,10 +1451,120 @@
         <!-- Footer -->
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3-4-1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../landing-page-form-validation/form-validation.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // Send lead data to Google Sheets in addition to normal PHP form handling
+        document.addEventListener('DOMContentLoaded', function () {
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQVH9fo6Bk0GRDUjFM63P0Z4WeuAbDzLtNDZp_kfZly6UD60koUgS7wIsoZFNuSeF6/exec';
+            const form = document.forms['landing_form'];
+            const inputs = form.querySelectorAll('input, select');
 
-    <script src="script/script.js"></script>
+            inputs.forEach(input => {
+                // Jab user type kare (input event)
+                input.addEventListener('input', function () {
+                    validateField(this);
+                });
+
+                // Jab user field se bahar nikle (blur event)
+                input.addEventListener('blur', function () {
+                    validateField(this);
+                });
+            });
+
+            function validateField(field) {
+                const errorElement = field.parentElement.querySelector('.error');
+                if (!errorElement) return true; // Agar error small element nahi hai to skip karein
+
+                let errorMessage = "";
+                let isValid = true;
+
+                // Course dropdown ya input empty check
+                if (field.value.trim() === "" || field.value === "-1") {
+                    // Placeholder name nikalne ke liye backup (jaise Course Interested)
+                    let fieldName = field.placeholder || (field.id === "course" ? "Course" : "This field");
+                    errorMessage = `${fieldName} is required.`;
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    field.classList.add('is-invalid');
+                    errorElement.innerText = errorMessage;
+                    errorElement.style.display = "block"; // 🛑 Error Show karein
+                } else {
+                    field.classList.remove('is-invalid');
+                    errorElement.innerText = "";
+                    errorElement.style.display = "none"; // ✅ Error Hide karein
+                }
+
+                return isValid;
+            }
+            if (!form) return;
+
+            let isSecondarySubmit = false;
+
+            form.addEventListener('submit', function (e) {
+                // Allow the second, programmatic submit to go straight to PHP
+                if (isSecondarySubmit) {
+                    return;
+                }
+                let isFormValid = true;
+                inputs.forEach(input => {
+                    if (!validateField(input)) {
+                        isFormValid = false;
+                    }
+                });
+                // Run existing validation first (from form-validation.js)
+                if (typeof valid_landing_form === 'function' || !isFormValid) {
+                    const isValid = valid_landing_form();
+                    if (!isValid) {
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+
+                // Prevent immediate navigation so we can send data to Google Sheets
+                e.preventDefault();
+                const formDataSheet = new FormData(form);
+                const payload = {
+                    name: formDataSheet.get('name'),
+                    email: formDataSheet.get('email'),
+                    phone: formDataSheet.get('phone'),
+                    course: formDataSheet.get('course'),
+                    url: window.location.href
+                };
+                formDataSheet.append("name", payload.name);
+                formDataSheet.append("email", payload.email);
+                formDataSheet.append("phone", payload.phone);
+                formDataSheet.append("course", payload.course);
+                formDataSheet.append("url", payload.url);
+
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: "POST",
+                    body: formDataSheet
+                }).then(res => res.json())
+                    .then(data => console.log("Success:", data)).catch(function (error) {
+                        console.error('Error sending lead to Google Sheets:', error);
+                    }).finally(function () {
+                        // Now let the original PHP form submission happen
+                        isSecondarySubmit = true;
+                        form.submit();
+                    })
+            });
+        });
+    </script>
+    <script>    $(document).ready(function () {
+            let url = window.location.href;
+            if (url.includes("thankyou")) {
+                $(".enq-form").addClass("thankyou-page");
+            }
+        });</script>
 </body>
 
 </html>
