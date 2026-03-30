@@ -16,6 +16,10 @@ input {
     width: fit-content;
 }
 
+.carousel-item {
+    transition: opacity 5s ease-in-out !important;
+}
+
 .heroContent,
 .gap-20,
 .formBody {
