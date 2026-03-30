@@ -1,0 +1,459 @@
+@font-face {
+    font-family: "Segoe UI";
+    src: url("../font/segoeuithis.ttf");
+}
+
+body {
+    font-family: "Inter", "Playfair Display";
+}
+
+input {
+    outline: none;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.carousel-item {
+    transition: opacity 5s ease-in-out !important;
+}
+
+.heroContent,
+.formBody {
+    gap: 18px
+}
+
+.inter {
+    font-family: Inter !important;
+}
+
+.pb-15px {
+    padding-bottom: 15px;
+}
+
+.text-orange {
+    color: #E42A1D !important;
+}
+
+.text-navy {
+    color: #216CB4 !important;
+}
+
+.text-lightBlue {
+    color: #DBEAFE !important;
+}
+
+.text-color-1 {
+    color: #99A1AF !important;
+}
+
+.bg-navy {
+    background-color: #216CB4 !important;
+}
+
+.bg-darkBlue {
+    background-color: #00213D !important
+}
+
+.opacity-90 {
+    opacity: 90%;
+}
+
+.opacity-40 {
+    opacity: 40%;
+}
+
+.bg-orange {
+    background-color: #E42A1D !important;
+}
+
+.bg-lightgrey {
+    background-color: #F4F4F4 !important;
+}
+
+.bg-F8F7F7 {
+    background-color: #F8F7F7 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.ls-1 {
+    letter-spacing: 1px !important;
+}
+
+.ls-2 {
+    letter-spacing: 2px !important;
+}
+
+.ls-3 {
+    letter-spacing: 3px !important;
+}
+
+.w-30 {
+    width: 30px !important;
+}
+
+.container-py {
+    padding: 80px 0px;
+}
+
+.gap-35 {
+    gap: 35px !important;
+}
+
+/* Hero Section */
+.logo {
+    width: 247px;
+    height: 124px;
+    aspect-ratio: 247/124;
+}
+
+.heroBgImage {
+    background:
+        radial-gradient(70.71% 70.71% at 50% 50%, rgba(255, 255, 255, 0) 100%),
+        url('../images/HeroSection\ \(1\).webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.hero-container {
+    padding: 60px 0px;
+}
+
+.admissionBadge {
+    padding: 10px 40px;
+    gap: 12px;
+    border-radius: 26843500px;
+    border: 0.8px solid rgba(81, 162, 255, 0.30);
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.admissionBadge div {
+    width: 8px;
+    height: 8px;
+    border-radius: 37770672px;
+    background: #FFF;
+}
+
+.admissionBadge span,
+.card-body p,
+.apply-btn,
+.formSubmitbutton,
+.explore {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px
+}
+
+.mainHead,
+.beginJourney {
+    font-family: "Playfair Display";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+}
+
+.mainPara {
+    max-width: 400px;
+    width: 100%;
+    color: #BEDBFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.hero-img {
+    transform: rotate(-2deg);
+}
+
+.content-hero {
+    width: 84% !important;
+}
+
+/* Hero Section */
+
+/* Form */
+.form {
+    margin-left: -50px;
+    width: 500px;
+    z-index: 10;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    background: #FFF;
+}
+
+.formHead,
+.form-field {
+    border-bottom: 1px solid #4D4D4D;
+}
+
+.formHead h3 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    padding-right: 40px;
+}
+
+.form-svg {
+    bottom: 20px;
+    right: 60px
+}
+
+.formBody,
+.formHead,
+.ctaContainer {
+    padding: 34px;
+}
+
+.apply-btn {
+    padding: 15px 30px;
+    border-radius: 28222352px;
+    background: linear-gradient(135deg, #3B82F6 0%, #1F144F 100%);
+    box-shadow: 0 21.027px 26.284px -5.257px rgba(0, 0, 0, 0.10), 0 8.411px 10.514px -6.308px rgba(0, 0, 0, 0.10);
+}
+
+.explore,
+.formSubmitbutton {
+    padding: 15px 30px;
+}
+
+.hero-img {
+    bottom: -100px;
+}
+
+/* Form */
+
+
+/* FAQ Section */
+.bgImage {
+    background:
+        linear-gradient(rgba(10, 10, 26, 0.85), rgba(10, 10, 26, 0.85)),
+        url("../images/Section-2.webp") top/cover no-repeat;
+    width: 100%;
+    min-height: 400px;
+    max-height: 800px;
+    height: 100%;
+}
+
+.admissionBadge,
+.newAdmission {
+    padding: 10px 50px 10px 25px;
+    gap: 12px;
+    border-radius: 37770672px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.admissionOpenHead {
+    color: #1F144F;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.admissionOpenPara {
+    color: rgba(31, 20, 79, 0.50);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.32px;
+    width: 500px;
+}
+
+.admissionBadge div,
+.newAdmission div {
+    width: 12px;
+    height: 12px;
+    border-radius: 37770672px;
+    opacity: 0.5;
+    background: #FFF;
+}
+
+.ctaSpan {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* FAQ Section */
+.faq-header h3 {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.accordion-item {
+    border-radius: 14px;
+    border: 0.8px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:has(.accordion-button:not(.collapsed)) {
+    border-radius: 14px;
+    border: 0.8px solid rgba(100, 120, 255, 0.35);
+    background: linear-gradient(135deg, #000 0%, #01213D 100%);
+    box-shadow: 0 4px 32px 0 rgba(60, 80, 220, 0.15);
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #000 0%, #01213D 100%) !important;
+}
+
+.accordion-button {
+    background: transparent !important;
+    color: #FFF !important;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.688px;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-radius: 10px !important;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.faq-icon {
+    width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    margin-left: auto;
+    border-radius: 26843500px;
+    border: 0.8px solid rgba(255, 255, 255, 0.20);
+    color: #99A1AF;
+}
+
+.accordion-button:not(.collapsed) .faq-icon {
+    transform: rotate(180deg);
+    background: linear-gradient(135deg, #4F6EF7 0%, #7C3AED 100%);
+    color: #fff;
+}
+
+.accordion-body {
+    color: #99A1AF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.faqpara {
+    max-width: 400px;
+    width: 100%;
+
+}
+
+.accordion-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.faqContainer {
+    gap: 48px
+}
+
+/* FAQ Section */
+/* Footer */
+.footerLeft img {
+    max-width: 247px;
+    max-height: 124px;
+    aspect-ratio: 247/124;
+}
+
+.pathwayFooter p,
+.offerInnerContent p,
+.card-text,
+.journey-head p,
+.eligibilityPara,
+.process-head,
+.faqpara {
+    color: rgba(31, 20, 79, 0.60);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 650px;
+    width: 100%;
+}
+
+.pathwayFooter {
+    margin: auto;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px 10px;
+    gap: 30px;
+    border-radius: 5px;
+    border-top: 1px solid rgba(31, 20, 79, 0.60);
+}
+
+.mainfooter {
+    gap: 20px;
+    padding: 30px 0px;
+}
+
+.footerLeft {
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.footerLeft p,
+.contactInfo,
+.contactInfo>a>span,
+.journeyCard p,
+.process-card p {
+    color: #99A1AF;
+    font-size: 14px;
+    line-height: 20px;
+    width: 367px;
+}
+
+.footerRight {
+    width: 388px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 16px;
+    padding-top: 30px;
+}
+
+.footerRight h5,
+.sub-description,
+.ctaContainer p {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.copyRightSection p,
+.careerSubHead,
+.process-card span {
+    color: #6A7282;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* Footer */

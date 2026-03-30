@@ -1,29 +1,18 @@
-@media (max-width:1064px) {
-    .hero-img {
-        bottom: -37px;
-    }
-
-    .faqContainer,
-    .gap-md-30 {
-        gap: 30px !important
-    }
-
-    .programSubHead {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
-    .admissionBadge span,
-    .cardContainer div p,
-    .faq-number,
-    .accordion-body {
-        font-size: 14px;
-    }
-}
-
 @media (max-width:920px) {
+    .mx-md-0 {
+        margin: auto 0px !important;
+    }
 
-    .hero-container,
+    .process-row-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-container {
+        padding: 50px 0px;
+    }
+
     .container-py {
         padding: 40px 0px;
     }
@@ -40,7 +29,7 @@
     }
 
     .admissionBadge {
-        padding: 10px 30px;
+        padding: 10px 40px;
     }
 
     .footerRight {
@@ -75,10 +64,6 @@
         font-size: 34px;
     }
 
-    .faq-header h3 {
-        font-size: 30px;
-    }
-
     .formHead h3,
     .offerCard>div:nth-child(2) h4,
     .offerCard>div:nth-child(3) h4 {
@@ -99,23 +84,17 @@
     }
 
     .text-coral,
-    .offerInnerContent p,
-    .faqpara {
+    .offerInnerContent p {
         font-size: 14px;
-        line-height: 24px;
     }
 
     .careerSubHead {
         font-size: 12px;
     }
 
+    .logo,
     .footerLeft img {
         max-width: 200px;
-    }
-
-    .form {
-        margin-left: 0px;
-        width: 100%;
     }
 
     .form,
@@ -174,15 +153,29 @@
     }
 }
 
-@media (min-width:1068px) {
-    .w-md-70 {
-        width: 70% !important;
+@media (max-width:768px) {
+    .top-sm-0 {
+        top: 0px;
     }
 }
 
-@media (max-width:576px) {
+@media (max-width:546px) {
+    .process-row-container {
+        padding-top: 20px;
+        gap: 30px;
+    }
 
-    .content-hero {
-        width: 100% !important;
+    .iconCircle {
+        width: 50px;
+        height: 50px;
+        padding: 0 14px;
+        top: -25px;
+    }
+}
+
+@media (min-width:1064px) {
+    .maxW-md-850px {
+        width: 850px !important;
+        z-index: 1;
     }
 }
