@@ -1,139 +1,6 @@
-@media (min-width:768px) {
-    .mb-40 {
-        margin-bottom: 40px !important;
-    }
-}
-
-@media (min-width:946px) {
-    .mt-md--60px {
-        margin-top: -25px;
-    }
-
-}
-
-@media (min-width:1100px) {
-    .mt-md--60px {
-        margin-top: -35px;
-    }
-}
-
-@media (max-width:1064px) {
-    .mb-60px {
-        margin-bottom: 60px;
-    }
-
-    .logo-container img {
-        max-width: 30%;
-    }
-
-    .journeyCard {
-        width: fit-content
-    }
-
-    .form,
-    .programPara,
-    .whyTheseStreamImg img,
-    .imageOverlay,
-    .footerLeft p,
-    .contactInfo,
-    .footerRight {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-
-    .formBody,
-    .formHead {
-        padding: 30px;
-    }
-
-    .cardContainer {
-        padding: 20px;
-    }
-
-    .form-svg {
-        right: 0px;
-    }
-
-    .mainBgImage,
-    .containerPy {
-        padding: 50px 14px;
-    }
-
-    .admissionBadge {
-        padding: 10px 20px;
-    }
-
-    .imageOverlay {
-        padding: 18px;
-    }
-
-    .mainHead {
-        font-size: 40px;
-        padding-right: 0%;
-    }
-
-    .programSubHead {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
-    .mainPara,
-    .subjectHead {
-        font-size: 18px;
-    }
-
-    .admissionOpenPara {
-        font-size: 16px;
-    }
-
-    .admissionBadge span,
-    .cardContainer div p,
-    .faq-number,
-    .accordion-body {
-        font-size: 14px;
-    }
-
-    .subBadge {
-        font-size: 11px;
-    }
-
-    .apply-btn {
-        padding: 10px 30px;
-    }
-
-    .pathwayHead,
-    .admissionOpenHead,
-    .career-header h3,
-    .journey-head h4 {
-        font-size: 30px;
-        line-height: 42px;
-    }
-
-    .pathwayCardContent {
-        padding: 50px 20px;
-    }
-
-    .footerRight,
-    .feature-card {
-        padding-top: 20px;
-    }
-
-    .mainfooter {
-        gap: 35px
-    }
-
-    .faqContainer,
-    .gap-md-30 {
-        gap: 30px !important
-    }
-}
-
-@media(max-width:946px) {
-    .whyTheseStreamImg {
-        max-height: 500px;
-        height: 100%;
-        aspect-ratio: 1 / 1;
-        margin: auto;
+@media (max-width:920px) {
+    .mx-md-0 {
+        margin: auto 0px !important;
     }
 
     .process-row-container {
@@ -142,94 +9,157 @@
         gap: 40px;
     }
 
-    .career-img {
-        margin: auto;
-        max-height: 500px;
-    }
-}
-
-@media (max-width:546px) {
-    .journeyCard {
-        width: 100%;
+    .hero-container {
+        padding: 50px 0px;
     }
 
-    .logo-container img {
-        max-width: 40%;
+    .container-py {
+        padding: 40px 0px;
+    }
+
+    .offerContent,
+    .text-coral {
+        padding: 0px 15px;
+    }
+
+    .apply-btn,
+    .enrollbtn,
+    .tab-btn {
+        padding: 10px 20px;
+    }
+
+    .admissionBadge {
+        padding: 10px 40px;
+    }
+
+    .footerRight {
+        padding-top: 20px;
+    }
+
+    .career-card .card-body {
+        padding: 15px;
+    }
+
+    .tab-toggle {
+        padding: 10px;
     }
 
     .formBody,
     .formHead {
-        padding: 20px;
+        padding: 30px;
+    }
+
+    .mainHead,
+    .offerHead h3,
+    .beginJourney {
+        font-size: 38px;
+        line-height: 52px;
+    }
+
+    .headline,
+    .opportunityHead,
+    .programSubHead,
+    .careerPathway,
+    .journey-head h4 {
+        font-size: 34px;
     }
 
     .formHead h3,
-    .pathwayCardContent h5 {
+    .offerCard>div:nth-child(2) h4,
+    .offerCard>div:nth-child(3) h4 {
         font-size: 20px;
         line-height: 26px;
     }
 
-    .mainHead {
-        font-size: 35px;
-    }
-
-    .mainPara,
-    .subjectHead,
-    .programPara,
-    .feature-content p {
-        font-size: 16px;
-        line-height: 22px !important;
-    }
-
-    .pathwayCardContent p,
-    .imageOverlay p {
-        font-size: 14px;
-        line-height: 20px
-    }
-
-    .pathwayIcon {
-        width: 70px;
-        height: 70px;
-    }
-
-    .pathwayIcon span {
-        width: 50px;
-        height: 50px;
-        padding: 0 14px;
-    }
-
-    .pathwayCardContent {
-        padding: 35px 20px;
-    }
-
-    .pathwayFooter {
-        gap: 20px
-    }
-
-    .feature-card {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .imageOverlay {
-        padding: 16px;
-    }
-
-    .opportunity-header {
-        padding: 20px;
+    .eligibilitySub {
         font-size: 18px;
-        line-height: 24px;
+        line-height: 23px;
     }
 
-    .opportunity-content {
-        padding: 10px 20px;
+    .enrollbtn,
+    .careerPathwaysHead p,
+    .beginJourneyPara {
+        font-size: 16px;
+        line-height: 22px;
     }
 
-    .faq-icon {
-        width: 40px;
-        height: 40px;
+    .text-coral,
+    .offerInnerContent p {
+        font-size: 14px;
     }
 
+    .careerSubHead {
+        font-size: 12px;
+    }
+
+    .logo,
+    .footerLeft img {
+        max-width: 200px;
+    }
+
+    .form,
+    .footerLeft p,
+    .contactInfo,
+    .footerRight,
+    .journeyCard {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+
+    .form-svg {
+        right: 0px;
+    }
+
+    .heroContent {
+        gap: 10px;
+    }
+
+    .offerContent,
+    .ourDifferenceMain {
+        gap: 15px
+    }
+
+    .offerMain,
+    .offerCard {
+        gap: 20px;
+    }
+
+    .mainfooter,
+    .opportunityGap {
+        gap: 35px
+    }
+
+    .gap-md-30 {
+        gap: 30px;
+    }
+
+    .mainPara {
+        max-width: 100%;
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 0px 5px;
+    }
+
+    .eligiblity-bg {
+        border-radius: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .leftContent {
+        padding: 75px 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .top-sm-0 {
+        top: 0px;
+    }
+}
+
+@media (max-width:546px) {
     .process-row-container {
         padding-top: 20px;
         gap: 30px;
@@ -241,8 +171,11 @@
         padding: 0 14px;
         top: -25px;
     }
+}
 
-    .strengthCard {
-        width: 165px;
+@media (min-width:1064px) {
+    .maxW-md-850px {
+        width: 850px !important;
+        z-index: 1;
     }
 }

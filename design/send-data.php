@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['success'] = 'Your Message Sent!';
 
             // --- Send lead data to Google Sheet (server-side) ---
-            $googleScriptUrl = 'https://script.google.com/macros/s/AKfycbwQVH9fo6Bk0GRDUjFM63P0Z4WeuAbDzLtNDZp_kfZly6UD60koUgS7wIsoZFNuSeF6/exec';
+            $googleScriptUrl = 'https://script.google.com/macros/s/AKfycbzbC2OLa5G0qVMpAoZ0f0wrgrUBmGVa8d0EM0ywDXZHFnHieZdvBFaaZZFf9AnCl2Q/exec';
             $sheetPayload = [
                 'name'      => $name,
                 'email'     => $email,
