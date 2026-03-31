@@ -63,6 +63,10 @@
         padding: 0px 15px;
     }
 
+    .journeyCard {
+        padding: 15px 10px;
+    }
+
     .apply-btn,
     .enrollbtn,
     .tab-btn,
@@ -108,7 +112,8 @@
     .faq-header h3,
     .admissionOpenContainer h3,
     .programSubHead,
-    .campusExperience h3 {
+    .campusExperience h3,
+    .journeyCard h4 {
         font-size: 30px;
         line-height: 40px;
     }

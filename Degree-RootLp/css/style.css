@@ -80,6 +80,10 @@ input {
     background-color: #00213D !important
 }
 
+.bg-darkblack {
+    background-color: #0A0A1A !important;
+}
+
 .opacity-90 {
     opacity: 90%;
 }
@@ -573,6 +577,85 @@ input {
 
 /* Career Experience */
 
+/* Career Pathways */
+.journey-head h4 {
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.journeyCard {
+    width: 197px;
+    padding: 25px 12px;
+    gap: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.journeyCard h4 {
+    color: #FFF;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+/* Our key */
+.programSubHead {
+    font-family: "Playfair Display";
+    color: #1F144F;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.cardGrid {
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 20px;
+}
+
+.strengthCard {
+    width: 220px;
+    gap: 20px;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(31, 20, 79, 0.50);
+    background: #FFF;
+    box-shadow: 2px 4px 4px 0 rgba(132, 113, 216, 0.60);
+}
+
+.strengthCard div:nth-child(1) {
+    width: 70px;
+    height: 70px;
+    aspect-ratio: 1/1;
+}
+
+.strengthCard h5 {
+    color: #000;
+    font-size: 14.72px;
+    font-weight: 700;
+    line-height: 21.344px;
+}
+
+.strengthCard span {
+    border-radius: 26843500px;
+    background: rgba(31, 20, 79, 0.70);
+    width: 24px;
+    height: 2px;
+}
+
+.bb-blue {
+    display: inline-block;
+    width: 80px;
+    height: 7px;
+    border-radius: 32202136px;
+    background: #1F144F;
+}
+
+/* Our key */
 /* CTA Section */
 .admissionOpenContainer {
     border-radius: 16px;
