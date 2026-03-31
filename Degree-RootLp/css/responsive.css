@@ -1,3 +1,21 @@
+@media(min-width:764px) {
+    .span-2-rows {
+        max-height: 450px;
+        height: 100%;
+        grid-row: span 2;
+    }
+
+    .span-2-column {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width:1068px) {
+    .w-md-70 {
+        width: 70% !important;
+    }
+}
+
 @media (max-width:1064px) {
     .hero-img {
         bottom: -37px;
@@ -8,16 +26,22 @@
         gap: 30px !important
     }
 
-    .programSubHead {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
     .admissionBadge span,
     .cardContainer div p,
     .faq-number,
     .accordion-body {
         font-size: 14px;
+    }
+
+    .form,
+    .programPara,
+    .whyTheseStreamImg img,
+    .imageOverlay,
+    .footerLeft p,
+    .contactInfo,
+    .footerRight {
+        max-width: 100% !important;
+        width: 100% !important;
     }
 }
 
@@ -28,6 +52,12 @@
         padding: 40px 0px;
     }
 
+    .process-row-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
     .offerContent,
     .text-coral {
         padding: 0px 15px;
@@ -35,7 +65,8 @@
 
     .apply-btn,
     .enrollbtn,
-    .tab-btn {
+    .tab-btn,
+    .ctabutton {
         padding: 10px 20px;
     }
 
@@ -69,14 +100,17 @@
 
     .headline,
     .opportunityHead,
-    .programSubHead,
     .careerPathway,
     .journey-head h4 {
         font-size: 34px;
     }
 
-    .faq-header h3 {
+    .faq-header h3,
+    .admissionOpenContainer h3,
+    .programSubHead,
+    .campusExperience h3 {
         font-size: 30px;
+        line-height: 40px;
     }
 
     .formHead h3,
@@ -86,7 +120,8 @@
         line-height: 26px;
     }
 
-    .eligibilitySub {
+    .eligibilitySub,
+    .process-card h4 {
         font-size: 18px;
         line-height: 23px;
     }
@@ -100,12 +135,16 @@
 
     .text-coral,
     .offerInnerContent p,
-    .faqpara {
+    .faqpara,
+    .admissionOpenContainer p,
+    .programPara {
         font-size: 14px;
         line-height: 24px;
     }
 
-    .careerSubHead {
+    .careerSubHead,
+    .admissionOpenContainer span,
+    .our-program span {
         font-size: 12px;
     }
 
@@ -122,7 +161,8 @@
     .footerLeft p,
     .contactInfo,
     .footerRight,
-    .journeyCard {
+    .journeyCard,
+    .process-card p {
         max-width: 100% !important;
         width: 100% !important;
     }
@@ -168,21 +208,35 @@
         height: 100%;
         width: 100%;
     }
-
-    .leftContent {
-        padding: 75px 20px;
-    }
-}
-
-@media (min-width:1068px) {
-    .w-md-70 {
-        width: 70% !important;
-    }
 }
 
 @media (max-width:576px) {
 
     .content-hero {
         width: 100% !important;
+    }
+
+    .process-row-container {
+        padding-top: 20px;
+        gap: 30px;
+    }
+
+    .iconCircle {
+        width: 50px;
+        height: 50px;
+        padding: 0 14px;
+        top: -25px;
+    }
+
+    .campus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        min-height: 220px;
+    }
+
+    .campus-section {
+        padding: 50px 0 70px;
     }
 }
