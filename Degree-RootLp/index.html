@@ -1175,7 +1175,7 @@
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - viewport.offsetLeft;
-            const walk = (x - startX) * 1.5; // 1.5 = scroll speed
+            const walk = (x - startX) * 1.5;
             viewport.scrollLeft = scrollLeft - walk;
         });
         const track = document.getElementById('cardsTrack');
@@ -1325,7 +1325,7 @@
     <script>
         // Send lead data to Google Sheets in addition to normal PHP form handling
         document.addEventListener('DOMContentLoaded', function () {
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQVH9fo6Bk0GRDUjFM63P0Z4WeuAbDzLtNDZp_kfZly6UD60koUgS7wIsoZFNuSeF6/exec';
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyQEa9ncWcgRHwJU_7vh75Os1RL334DKPPaMmr52kL2slZSXxkm4247IAq2QtLvOUnxNg/exec';
             const form = document.forms['landing_form'];
             if (!form) return;
 
