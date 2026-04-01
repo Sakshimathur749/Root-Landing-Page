@@ -17,9 +17,6 @@
 }
 
 @media (max-width:1064px) {
-    .hero-img {
-        bottom: -37px;
-    }
 
     .faqContainer,
     .gap-md-30 {
@@ -43,6 +40,11 @@
         max-width: 100% !important;
         width: 100% !important;
     }
+
+    .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 
 @media (max-width:920px) {
@@ -50,12 +52,6 @@
     .hero-container,
     .container-py {
         padding: 40px 0px;
-    }
-
-    .process-row-container {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
     }
 
     .offerContent,
@@ -113,7 +109,11 @@
     .admissionOpenContainer h3,
     .programSubHead,
     .campusExperience h3,
-    .journeyCard h4 {
+    .journeyCard h4,
+    .careerContent h3,
+    .why-title,
+    .corp-title,
+    .section-heading {
         font-size: 30px;
         line-height: 40px;
     }
@@ -133,7 +133,8 @@
 
     .enrollbtn,
     .careerPathwaysHead p,
-    .beginJourneyPara {
+    .beginJourneyPara,
+    .why-desc {
         font-size: 16px;
         line-height: 22px;
     }
@@ -142,7 +143,8 @@
     .offerInnerContent p,
     .faqpara,
     .admissionOpenContainer p,
-    .programPara {
+    .programPara,
+    .corp-desc {
         font-size: 14px;
         line-height: 24px;
     }
@@ -166,7 +168,6 @@
     .footerLeft p,
     .contactInfo,
     .footerRight,
-    .journeyCard,
     .process-card p {
         max-width: 100% !important;
         width: 100% !important;
@@ -213,9 +214,38 @@
         height: 100%;
         width: 100%;
     }
+
+    .cards-track {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width:764px) {
+    .hero-img {
+        bottom: -37px;
+    }
+
+    .process-row-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .prog-tabs {
+        margin: 20px 0px;
+    }
 }
 
 @media (max-width:576px) {
+    .journeyCard {
+        width: 100%;
+        max-width: 100%;
+    }
 
     .content-hero {
         width: 100% !important;
@@ -243,5 +273,17 @@
 
     .campus-section {
         padding: 50px 0 70px;
+    }
+
+    .cards-track {
+        grid-template-columns: 1fr;
+    }
+
+    .prog-card:nth-child(3) {
+        display: none;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
