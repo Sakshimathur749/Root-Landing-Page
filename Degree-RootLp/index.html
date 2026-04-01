@@ -199,7 +199,7 @@
                         <button class="prog-tab cursor-pointer bg-transparent" data-tab="bcom">B.Com</button>
                         <button class="prog-tab active cursor-pointer bg-transparent" data-tab="ba">BA</button>
                     </div>
-                    <div class="cards-viewport position-relative overflow-hidden">
+                    <div class="cards-viewport position-relative">
                         <div class="cards-track" id="cardsTrack"></div>
                     </div>
                     <div class="prog-dots cursor-pointer" id="progDots"></div>
@@ -1145,119 +1145,173 @@
             ]
         };
 
-        let currentTab = 'ba';
-        let currentPage = 0;
-        const cardsPerPage = 3;
+        let currentTab = 'bba';
+        let autoTimer = null;
+        const tabOrder = ['bba', 'bcom', 'ba'];
+        // Mouse drag scroll
+        const viewport = document.querySelector('.cards-viewport');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
+        viewport.addEventListener('mousedown', (e) => {
+            isDown = true;
+            viewport.style.cursor = 'grabbing';
+            startX = e.pageX - viewport.offsetLeft;
+            scrollLeft = viewport.scrollLeft;
+        });
+
+        viewport.addEventListener('mouseleave', () => {
+            isDown = false;
+            viewport.style.cursor = 'grab';
+        });
+
+        viewport.addEventListener('mouseup', () => {
+            isDown = false;
+            viewport.style.cursor = 'grab';
+        });
+
+        viewport.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - viewport.offsetLeft;
+            const walk = (x - startX) * 1.5; // 1.5 = scroll speed
+            viewport.scrollLeft = scrollLeft - walk;
+        });
         const track = document.getElementById('cardsTrack');
         const dotsEl = document.getElementById('progDots');
-        const tabs = document.querySelectorAll('.prog-tab');
+        const tabBtns = document.querySelectorAll('.prog-tab');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
 
-        function totalPages(tab) {
-            return Math.ceil(data[tab].length / cardsPerPage);
-        }
-
-        function buildDots(tab) {
+        /* ── Dots: one per tab ── */
+        function buildDots() {
             dotsEl.innerHTML = '';
-            const pages = totalPages(tab);
-            for (let i = 0; i < pages; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'prog-dot' + (i === currentPage ? ' active' : '');
-                dot.addEventListener('click', () => {
-                    currentPage = i;
-                    renderCards(currentTab, false);
-                });
+            tabOrder.forEach(tab => {
+                const dot = document.createElement('button');
+                dot.className = 'prog-dot' + (tab === currentTab ? ' active' : '');
+                dot.dataset.tab = tab;
+                dot.addEventListener('click', () => switchTab(tab));
                 dotsEl.appendChild(dot);
-            }
-        }
-
-        function updateDots() {
-            document.querySelectorAll('.prog-dot').forEach((d, i) => {
-                d.classList.toggle('active', i === currentPage);
             });
         }
 
-        function renderCards(tab, isTabChange = true) {
-            // Step 1: rotate OUT the whole track
-            track.classList.add('rotate-out');
+        function updateDots() {
+            dotsEl.querySelectorAll('.prog-dot').forEach(d => {
+                d.classList.toggle('active', d.dataset.tab === currentTab);
+            });
+        }
+
+        function updateTabBtns() {
+            tabBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.tab === currentTab);
+            });
+        }
+
+        /* ── Render cards with fade-up transition ── */
+        function renderCards() {
+            const cards = data[currentTab] || [];
+
+            // Fade OUT
+            track.classList.add('fade-out');
 
             setTimeout(() => {
-                // Step 2: swap content
                 track.innerHTML = '';
-                track.classList.remove('rotate-out');
-                track.classList.add('rotate-in-start'); // instant reset to right side
+                track.classList.remove('fade-out');
+                track.classList.add('fade-in-start');
 
-                const pageData = data[tab].slice(
-                    currentPage * cardsPerPage,
-                    currentPage * cardsPerPage + cardsPerPage
-                );
-
-                pageData.forEach((item) => {
+                cards.forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'prog-card';
                     card.innerHTML = `
-                    <div class="card-img-wrap">
-                        <img src="${item.img}" alt="${item.title}" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">${item.title}</h3>
-                        <p class="card-subtitle">${item.subtitle}</p>
-                        <ul class="card-list">
-                            ${item.points.map(p => `<li>${p}</li>`).join('')}
-                        </ul>
-                    </div>
-                `;
+                        <div class="card-img-wrap">
+                            <img src="${item.img}" alt="${item.title}" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">${item.title}</h3>
+                            <p class="card-subtitle">${item.subtitle}</p>
+                            <ul class="card-list">
+                                ${item.points.map(p => `<li>${p}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
                     track.appendChild(card);
                 });
 
-                // Step 3: next frame — rotate IN together
+                // Reset scroll to start
+                track.scrollLeft = 0;
+
+                // Fade IN
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
-                        track.classList.remove('rotate-in-start');
-                        track.classList.add('rotate-in');
-
-                        // cleanup
-                        setTimeout(() => {
-                            track.classList.remove('rotate-in');
-                        }, 500);
+                        track.classList.remove('fade-in-start');
+                        track.classList.add('fade-in');
+                        setTimeout(() => track.classList.remove('fade-in'), 500);
                     });
                 });
 
                 updateDots();
-            }, 450); // wait for rotate-out to finish
+
+                // Auto-scroll if 4+ cards
+                startAutoScroll(cards.length);
+
+            }, 200);
         }
 
-        // Tab click
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                if (tab.dataset.tab === currentTab) return;
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                currentTab = tab.dataset.tab;
-                currentPage = 0;
-                buildDots(currentTab);
-                renderCards(currentTab, true);
-            });
+        /* ── Auto scroll (4+ cards, every 4 sec) ── */
+        function startAutoScroll(cardCount) {
+            stopAutoScroll();
+            if (cardCount < 4) return;
+
+            autoTimer = setInterval(() => {
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                if (track.scrollLeft >= maxScroll - 10) {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    const cardWidth = (track.querySelector('.prog-card')?.offsetWidth || 280) + 20;
+                    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            }, 4000);
+        }
+
+        function stopAutoScroll() {
+            if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+        }
+
+        track.addEventListener('mouseenter', stopAutoScroll);
+        track.addEventListener('mouseleave', () => {
+            startAutoScroll((data[currentTab] || []).length);
         });
 
-        prevBtn.addEventListener('click', () => {
-            const pages = totalPages(currentTab);
-            currentPage = (currentPage - 1 + pages) % pages;
-            renderCards(currentTab, false);
+        /* ── Switch tab ── */
+        function switchTab(tab) {
+            if (tab === currentTab) return;
+            currentTab = tab;
             updateDots();
+            updateTabBtns();
+            renderCards();
+        }
+
+        /* ── Tab buttons ── */
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+        });
+
+        /* ── Arrows → switch tabs ── */
+        prevBtn.addEventListener('click', () => {
+            const idx = tabOrder.indexOf(currentTab);
+            switchTab(tabOrder[(idx - 1 + tabOrder.length) % tabOrder.length]);
         });
 
         nextBtn.addEventListener('click', () => {
-            const pages = totalPages(currentTab);
-            currentPage = (currentPage + 1) % pages;
-            renderCards(currentTab, false);
-            updateDots();
+            const idx = tabOrder.indexOf(currentTab);
+            switchTab(tabOrder[(idx + 1) % tabOrder.length]);
         });
 
-        buildDots(currentTab);
-        renderCards(currentTab, false);
+        /* ── Init ── */
+        buildDots();
+        renderCards();
+
     </script>
 
     <script src="js/jquery-3-4-1.min.js"></script>

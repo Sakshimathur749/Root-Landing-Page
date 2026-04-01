@@ -215,13 +215,13 @@
         width: 100%;
     }
 
-    .cards-track {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .logo-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
+    }
+
+    .prog-card {
+        flex: 0 0 calc(50% - 10px);
     }
 }
 
@@ -275,12 +275,8 @@
         padding: 50px 0 70px;
     }
 
-    .cards-track {
-        grid-template-columns: 1fr;
-    }
-
-    .prog-card:nth-child(3) {
-        display: none;
+    .prog-card {
+        flex: 0 0 85%;
     }
 
     .logo-grid {
